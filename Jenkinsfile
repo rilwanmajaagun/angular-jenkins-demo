@@ -1,6 +1,6 @@
 node {
     stage('Checkout') {
-        scm checkout
+        checkout scm
     }
     stage('Build') {
         docker.image('trion/ng-cli').inside {
