@@ -31,8 +31,8 @@ module.exports = function (config) {
       environment: 'dev'
     },
     reporters: config.angularCli && config.angularCli.codeCoverage
-              ? ['progress', 'karma-remap-istanbul']
-              : ['progress'],
+              ? ['progress', 'karma-remap-istanbul', 'dots', 'junit']
+              : ['progress', 'dots', 'junit'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
