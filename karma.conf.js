@@ -33,7 +33,7 @@ module.exports = function (config) {
     reporters: config.angularCli && config.angularCli.codeCoverage
               ? ['progress', 'karma-remap-istanbul', 'dots', 'junit']
               : ['progress', 'dots', 'junit'],
-    junitReporter = {
+    junitReporter: {
       outputFile: 'test-results.xml'
     },
     port: 9876,
