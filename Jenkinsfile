@@ -11,7 +11,7 @@ pipeline {
         stage('Build') {
             agent {
                 docker {
-                    image 'node:18.16.0-alpine'
+                    image 'trion/ng-cli'
                     args '-v /var/run/docker.sock:/var/run/docker.sock'
                 }
             }
@@ -26,7 +26,7 @@ pipeline {
         stage('Test') {
             agent {
                 docker {
-                    image 'researchranks/alpine.angular'
+                    image 'trion/ng-cli'
                     args '-v /var/run/docker.sock:/var/run/docker.sock'
                 }
             }
