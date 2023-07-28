@@ -16,6 +16,8 @@ pipeline {
                 }
             }
             steps {
+                sh 'npm cache clean --force'
+                sh 'npm update'
                 sh 'npm install'
                 sh 'ng build --progress false --prod --aot'
                 sh 'tar -cvzf dist.tar.gz --strip-components=1 dist'
